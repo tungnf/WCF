@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMSMQService", "MyMSMQService\MyMSMQService.csproj", "{DD471C8B-F1D7-494C-A453-DF3C0B0B20BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMSMQClient", "..\MyMSMQClient\MyMSMQClient\MyMSMQClient.csproj", "{2F7661C7-44FC-48BF-938D-8AF57E05D242}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DD471C8B-F1D7-494C-A453-DF3C0B0B20BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD471C8B-F1D7-494C-A453-DF3C0B0B20BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD471C8B-F1D7-494C-A453-DF3C0B0B20BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD471C8B-F1D7-494C-A453-DF3C0B0B20BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F7661C7-44FC-48BF-938D-8AF57E05D242}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F7661C7-44FC-48BF-938D-8AF57E05D242}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F7661C7-44FC-48BF-938D-8AF57E05D242}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F7661C7-44FC-48BF-938D-8AF57E05D242}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
