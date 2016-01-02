@@ -1,6 +1,7 @@
 ﻿using MyMSMQClient.MyMSMQService;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,11 +13,16 @@ namespace MyMSMQClient
         static void Main(string[] args)
         {
             MsmqContractClient client = new MsmqContractClient();
-            client.SendMessage("Hello World!! 1234");
-            client.SendMessage("Hello World!! aaaa");
-            client.SendMessage("Hello World!! bbbb");
-            client.SendMessage("Hello World!! cccc");
-            client.Close();
+            try
+            {
+                client.SendMessage("Message 1");
+                client.SendMessage("Message 2");
+                client.SendMessage("Bad");
+                client.SendMessage("Message 3");
+                client.Close();
+            } catch (Exception e) {
+                Debug.WriteLine(e.ToString());
+            }
         }
     }
 }

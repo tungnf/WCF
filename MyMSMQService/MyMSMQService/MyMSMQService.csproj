@@ -75,6 +75,8 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Properties\PublishProfiles\IIS %28Server2 - 10.0.2.11%29.pubxml" />
+    <None Include="Properties\PublishProfiles\IIS Local.pubxml" />
     <None Include="Properties\PublishProfiles\Localhost IIS.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
