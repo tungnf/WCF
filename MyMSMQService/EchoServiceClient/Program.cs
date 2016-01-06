@@ -1,4 +1,4 @@
-﻿using MyMSMQClient.MyMSMQService;
+﻿using EchoServiceClient.ServiceReference1;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -7,32 +7,24 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace MyMSMQClient
+
+namespace EchoServiceClient
 {
     class Program
     {
         static void Main(string[] args)
         {
-            MsmqContractClient client = new MsmqContractClient();
+            Service1Client client = new Service1Client();
             try
             {
                 String message;
 
-                for (int i = 0; i < 5; i++)
+                for (int i = 0; i < 10; i++)
                 {
-                    if (i == 3)
-                    {
-                        // so we will trigger the execptioin or poison message handling
-                        message = "Bad";
-                    }
-                    else
-                    {
-                        message = "Message " + i;
-                    }
-
+                    message = "Message [" + i + "]";
                     Console.WriteLine("Sending..." + message);
 
-                    client.SendMessage(message);
+                    client.Echo(message);
 
                     // wait 500ms
                     Thread.Sleep(500);
@@ -42,6 +34,7 @@ namespace MyMSMQClient
             {
                 Debug.WriteLine(e.ToString());
             }
+
         }
     }
 }
